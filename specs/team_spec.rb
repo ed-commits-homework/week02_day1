@@ -19,4 +19,9 @@ class TestTeam < MiniTest::Test
     team = Team.new("The Team", ["player"], "The Coach")
     assert_equal(false, team.find_player("other player"))
   end
+
+  def test_points_starts_zero
+    team = Team.new("The Team", ["player"], "The Coach")
+    assert_equal(0, team.points)
+  end
 end
