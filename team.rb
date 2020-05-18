@@ -11,4 +11,8 @@ class Team
   def add_player(player_name)
     @players << player_name
   end
+
+  def find_player(player_name)
+    return @players.include? player_name
+  end
 end
