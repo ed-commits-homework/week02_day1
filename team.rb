@@ -16,4 +16,9 @@ class Team
   def find_player(player_name)
     return @players.include? player_name
   end
+
+  def update_score(game_result)
+    @points += 1 if game_result == "win"
+    @points -= 1 if game_result == "lose"
+  end
 end
